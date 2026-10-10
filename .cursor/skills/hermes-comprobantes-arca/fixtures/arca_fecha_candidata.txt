@@ -1,0 +1,14 @@
+Fecha de Emision:
+ORIGINAL
+PRESTADOR DEMO SA
+Rivadavia 100 - Acebal, Santa Fe
+16/08/2026
+CUIT: 30999999991
+Punto de Venta: Comp. Nro: 3 12
+30711111112
+Subtotal: $ 1.234,56
+Fecha de Vto. de CAE:
+20/08/2026
+Fecha de Emision:
+DUPLICADO
+Subtotal: $ 9.999,00
