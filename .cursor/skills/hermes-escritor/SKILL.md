@@ -18,7 +18,7 @@ Turn `docs/architecture.md` into working code via thin vertical slices. Smoke-te
 1. Read `.cursor/orchestra.json` — respect enabled services and `roles.writer`.
 2. Read architecture doc (`orchestra.paths.architectureDoc` or `docs/architecture.md`).
 3. Require `status: approved` (frontmatter) **or** explicit user message approving the plan. If still `draft`, stop and send them to **hermes-arquitecto**.
-4. If a writing plan exists (`orchestra.paths.implementationPlan` or `docs/implementation-plan.md`) and this turn names a `slice_id`, implement **only** that slice’s pending BPs. Do not invent extra BPs.
+4. If a writing plan exists (`orchestra.paths.implementationPlan` or `docs/implementation-plan.md`) and this turn names a `slice_id`, implement **only** that slice’s pending BPs. Do not invent extra BPs. When the card has them: read only the `read_first` contract sections, use `contracts` names and copy exactly, handle every `edge_cases` line, list `verify` commands as the smoke commands, and respect `out_of_bounds`. A `stop_if` condition, or a BP that needs a behavior/data/security choice the card and contract do not make → return `STOP_NEEDS_HUMAN` (subagent) or ask once (direct) instead of choosing.
 
 ## Minimal path (before writing)
 

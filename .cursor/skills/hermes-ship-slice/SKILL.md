@@ -33,7 +33,7 @@ If the planned authored diff (additions + deletions, excluding obvious generated
 
 ### Fase 1 — Escritor (subagent)
 
-Launch foreground `hermes-escritor-run`. Pass only: `slice_id`, title, goal, pending BPs, acceptance, `gates`, `paths_hint`. Do not follow **hermes-escritor** in this chat.
+Launch foreground `hermes-escritor-run`. Pass only the slice card verbatim: `slice_id`, title, goal, pending BPs, acceptance, `gates`, `paths_hint`, plus `read_first`, `contracts`, `edge_cases`, `verify`, `out_of_bounds`, `stop_if` when the plan has them. Do not follow **hermes-escritor** in this chat.
 
 Require `## Phase evidence` with `phase: escritor`. Missing block → **STOP**.
 

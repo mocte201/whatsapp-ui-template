@@ -44,7 +44,7 @@ For `i = 1 .. max_slices`:
 
 1. Pick the first slice whose `status` is `pending` (or `in_progress` if resuming a STOP) and whose `depends_on` slices are `done`. If none: report empty or blocked queue and stop.
 2. Set that slice to `in_progress` on disk.
-3. Run **hermes-ship-slice** for **that slice only**. Pass: `slice_id`, title, goal, pending BPs, acceptance, `gates`, `paths_hint`. Do not follow **hermes-escritor**, **hermes-revisor**, or **hermes-documentador** in this chat.
+3. Run **hermes-ship-slice** for **that slice only**. Pass the full slice card verbatim (`slice_id`, title, and every field under that slice heading: goal, pending BPs, `contracts`, `edge_cases`, acceptance, `verify`, `gates`, `read_first`, `paths_hint`, `out_of_bounds`, `stop_if` when present). Do not follow **hermes-escritor**, **hermes-revisor**, or **hermes-documentador** in this chat.
 4. After ship-slice, trust evidence blocks, not a prose “done”:
    - Smoke `fail`, or `pass` without an integer exit → slice `blocked` or leave `in_progress`; **STOP** (optionally → **hermes-depurador**). Do not re-run the suite.
    - Review `STOP_NEEDS_HUMAN`, or missing `## Review handoff` → **STOP**. Do not mark `done`.
