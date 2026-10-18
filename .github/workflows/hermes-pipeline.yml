@@ -172,7 +172,7 @@ jobs:
                   "",
                   "Constraints:",
                   "- Work only on issue #%s." % issue_number,
-                  "- Skills under .cursor/skills/; pipeline under .cursor/pipeline/.",
+                  "- Skills under /cursor/stores/user/skills/ (or .cursor/skills/ if committed); pipeline under .cursor/pipeline/.",
                   "- Follow the playbook completely. Never merge to default branch.",
                   "- When you start, leave a short comment on the issue (or PR) that you are working.",
               ])

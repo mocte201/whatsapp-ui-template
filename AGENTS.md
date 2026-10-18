@@ -8,17 +8,22 @@
 
 ## Skills
 
-Live in `.cursor/skills/hermes-*`. Committed on purpose: a cloud agent only sees what's in the clone, not Percy's `~/.cursor`.
+The `hermes-*` skills are **not** in this repo. They come from Percy's personal store:
+
+- On Percy's machine, Cursor loads them automatically.
+- In a cloud agent they are at `/cursor/stores/user/skills/<skill>/SKILL.md` (delivered by *Sync Skills for Cloud Agents*). Before a Hermes role, read the matching skill from that folder. If it is missing, say so instead of improvising the role.
+
+They are updated from the Orchestrator with `hermes-sync-skills.ps1 -Target local`, not from this repo. `hermes-doctor`, `hermes-iniciador` and `hermes-forjador` belong to Percy's machine and are not used here.
 
 ## Hermes Pipeline
 
-Templates in `.cursor/pipeline/`. Update from Orchestrator:
+Pipeline templates (APROBADO/REHACER comments, Automation prompts, Issue body) live in `.cursor/pipeline/`, and subagents in `.cursor/agents/`. The source of truth is the `hermes-orchestrator` repo. To update them:
 
 ```powershell
 powershell -NoProfile -File <orchestrator-path>\scripts\hermes-sync-skills.ps1 -Target repo -Path <this-repo-path>
 ```
 
-`hermes-doctor`, `hermes-iniciador`, `hermes-forjador` are **not** here: they're local to the machine / control plane.
+Then commit `.cursor/pipeline` and `.cursor/agents`. If an Automation prompt changed, paste it again in cursor.com/automations.
 
 ## Profile
 

@@ -18,7 +18,7 @@
     "cloud": {
       "enabled": true,
       "environmentFile": ".cursor/environment.json",
-      "skillsPath": ".cursor/skills"
+      "skillsPath": "/cursor/stores/user/skills"
     }
   },
   "secrets": {

@@ -13,10 +13,10 @@ Estos archivos se refrescan con el sync; **no** los edites a mano en el proyecto
 
 ## Después de un sync
 
-1. **Commiteá** `.cursor/pipeline/` (y skills si también sincronizaste):
+1. **Commiteá** `.cursor/pipeline/` y `.cursor/agents/` (las skills llegan por el store personal, no se commitean):
    ```text
-   git add .cursor/pipeline .cursor/skills
-   git commit -m "chore: sincronizar pipeline y skills Hermes"
+   git add .cursor/pipeline .cursor/agents
+   git commit -m "chore: sincronizar pipeline y agents Hermes"
    ```
 2. Si usás el **workflow** Hermes: asegurate el secret `CURSOR_API_KEY` en GitHub del repo (Settings → Secrets → Actions). No hace falta re-pegar Automations de Cursor.
 3. Si cambiaron prompts y solo usás launch local desde Orchestrator: no hace falta nada más (el script lee `templates/pipeline/`).

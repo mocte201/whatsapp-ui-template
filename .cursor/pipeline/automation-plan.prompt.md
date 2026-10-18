@@ -23,7 +23,7 @@ The human reviewer is often **not a developer**. Anything they must read must be
 ### Read first
 
 1. `AGENTS.md` and `.cursor/orchestra.json` (if present). Respect enabled services and roles. If `roles.architect` is explicitly `false`, comment on the issue, set label `hermes/blocked`, stop.
-2. Portable skills under `.cursor/skills/` (or repo skill paths named in AGENTS):
+2. Hermes skills from `/cursor/stores/user/skills/<skill>/SKILL.md` (Percy's personal store; `.cursor/skills/` instead if the repo commits them, per `AGENTS.md`). If a skill is missing, say so on the issue instead of improvising its role:
    - Follow **hermes-arquitecto** for the contract (one-question rigor when fuzzy; Ready-when + implementation slices when non-trivial).
    - Follow **hermes-revisor** only on the plan/contract (no product code review yet): check Ready-when completeness, free-tier cron risks, open decisions not silently closed.
    - If stakes are high (auth, personal data, irreversible ops) and confidence is thin, note residual doubts for the human (optional **hermes-duda** framing in Notas técnicas) — never self-approve.

@@ -33,7 +33,7 @@ If replan is intended: human uses `REHACER` — this automation should **not** i
 
 ### Skills to follow (in order)
 
-Use committed portable skills under `.cursor/skills/` (paths in `AGENTS.md`):
+Read each skill from `/cursor/stores/user/skills/<skill>/SKILL.md` (Percy's personal store; `.cursor/skills/` instead if the repo commits them, per `AGENTS.md`). If a skill is missing, say so on the issue instead of improvising its role:
 
 1. **hermes-escritor** — implement the approved contract in thin slices; no silent invention of missing decisions. Prefer vertical slices with smoke per material cut.
 2. Smoke (part of escritor): install / lint / build / tests as the repo supports. Non-interactive only. **Stop-the-line:** if smoke fails, do not claim preview-ready — follow **hermes-depurador** (reproduce → localize → reduce → fix → guard) or mark `hermes/blocked`.
