@@ -1,9 +1,9 @@
 ---
 name: hermes-ship-gate-medio
 description: >-
-  Runs one medium slice gate (a11y, ux, observabilidad, optimizador,
-  simplificador) and returns pass or STOP. Use when hermes-ship-plan delegates
-  that gate.
+  Runs one medium gate (a11y, ux, observabilidad, optimizador,
+  simplificador) and returns pass or STOP. Use when hermes-lanzamiento
+  delegates that consolidated gate.
 model: gemini-3.8-flash-high
 readonly: true
 ---

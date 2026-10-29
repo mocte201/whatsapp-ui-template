@@ -1,8 +1,8 @@
 ---
 name: hermes-ship-gate
 description: >-
-  Runs one capable slice gate (seguridad or identidad) and returns pass, skip,
-  or STOP. Use when hermes-ship-plan delegates that gate.
+  Runs one capable gate (seguridad or identidad) and returns pass, skip,
+  or STOP. Use when hermes-lanzamiento delegates that consolidated gate.
 model: grok-4.7-high
 readonly: true
 ---
